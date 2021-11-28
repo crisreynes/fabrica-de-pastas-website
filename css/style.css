@@ -20,7 +20,7 @@ img:hover {
 		transform: translateX(0);
 	}
 	50% {
-		transform: translateX(3em);
+		transform: translateX(2.5em);
 	}
 	100% {
 	transform: translateX(0);
@@ -49,7 +49,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-.flexNav {
+.flex-nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
@@ -58,7 +58,7 @@ header {
 	text-align: center;
 	list-style: none;
 }
-.flexLi {
+.flex-nav__li {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -70,13 +70,12 @@ header {
 	padding: 2px;
 	border-radius: 5px;
 }
-.flexLi:hover {
+.flex-nav__li:hover {
 	background-color: lightblue;
 }
-.flexLi:hover a {
+.flex-nav__li:hover a {
 	color: black;
 }
-
 a {
 	text-decoration: none;
 	color: #DFE0DF;
@@ -94,34 +93,34 @@ footer p, div {
 	animation-delay: 500ms;
 	animation-duration: 2s;
 }
-.centrarTexto {
+.centrar-texto {
 	text-align: center;
 }
-.displayBlock {
+.display-block {
 	display: block;
 }
 /* GRID GENERAL*/
-.gridAreas {
+.grid-areas {
 	display: grid;
 	grid-template-areas: "header" "main" "footer";
 	grid-template-rows: 6.5em auto 4em;
 }
-.header {
+.grid-areas__header {
 	grid-area: header;
 }
-.main {
+.grid-areas__main {
 	grid-area: main;
 }
-.footer {
+.grid-areas__footer {
 	grid-area: footer;
 }
 /*index.html*/
-.imgPrincipalIndex {
+.img-p-index {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 }
-.imgPrincipalIndex img {
+.img-p-index img {
 	width: 90%;
 	height: auto;
 }
@@ -149,7 +148,7 @@ section p {
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
-.nosotrosTexto {
+.nosotros-texto {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -161,22 +160,22 @@ section p {
 	font-size: 2.5em;
 	grid-area: texto;
 }
-.nosotrosTexto p {
+.nosotros-texto p {
 	color: black;
 	margin: 0 .5em;
 }
-.nosotrosImg {
+.nosotros-img {
 	width: 100%;
 	background-image: url(../assets/chef-pasta.jpg);
 	grid-area: img;
 }
-.nosotrosImg2 {
+.nosotros-img2 {
 	grid-area: img2;
 	max-width: 100%;
 	background-image: url(../assets/cooked-pasta.jpg)
 }
 /*GRID NOSOTROS.HTML*/
-.gridNosotros {
+.grid-nosotros {
 	display: grid;
 	grid-template-areas: "img texto" "img img2";
 	grid-template-rows: 1fr 1fr;
@@ -240,13 +239,10 @@ header {
 	flex-direction: column;
 	align-items: center;
 }
-#id {
-	margin-bottom: .3em;
-}
-.flexNav {
+.flex-nav {
 	flex-direction: column;
 }
-.flexLi {
+.flex-nav__li {
 		width: 9em;
 		height: 25px;
 		margin: 3px;
@@ -257,17 +253,17 @@ header {
 	div img {
 		max-width:100%;
 	}
-	.imgIndex {
+	.img-index {
 		margin: .3em 0;
 	}
 	/* GRID GRAL*/
-	.gridAreas {
+	.grid-areas {
 		grid-template-rows: 16.5em auto 2em;
 	}
 	/*especialidades.html*/
 
 	/*nosotros.html*/
-	.gridNosotros {
+	.grid-nosotros {
 		grid-template-areas: "img" "texto" "img2";
 		grid-template-rows: auto auto auto;
 		grid-template-columns: 100%;
@@ -303,13 +299,10 @@ header {
 	flex-direction: column;
 	align-items: center;
 	}
-	#id {
-		margin-bottom: .3em;
-	}
-	.flexNav {
+	.flex-nav {
 		flex-direction: column;
 	}
-	.flexLi {
+	.flex-nav__li {
 		width: 10em;
 		height: 25px;
 		margin: 1px;
@@ -320,20 +313,20 @@ header {
 	div img {
 		max-width:100%;
 	}
-	.imgIndex {
+	.img-index {
 		margin: .3em 0;
 	}
 	.img {
 		margin: 0 3em;
 	}
 	/* GRID GRAL */
-	.gridAreas {
+	.grid-areas {
 		grid-template-rows: 15.5em auto 2em;
 	}
 	/*especialidades.html*/
 
 	/*nosotros.html*/
-	.gridNosotros {
+	.grid-nosotros {
 		grid-template-areas: "img" "texto" "img2";
 		grid-template-rows: auto auto auto;
 		grid-template-columns: 100%;
