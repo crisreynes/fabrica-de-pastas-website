@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Open+Sans:ital,wght@1,700;1,800&display=swap');
+
+html {
+	font-family: 'Inter', sans-serif;
+}
+.titulo {
+	font-family: 'Open Sans', sans-serif;
+}
+/* animaciones */
+img:hover {
+	transform: scale(1.09);
+}
+@keyframes titulo_animado {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(2.5em);
+	}
+	100% {
+	transform: translateX(0);
+	}
+}
+/* background & padding */
+header {
+	background-color: #ff6b21;
+	padding: 1em 1.5em;
+}
+main {
+	background-color: #FFE7D4;
+	padding: 1em 1.5em;
+}
+footer {
+	background-color: #000000;
+	padding: 1em 1.5em;
+}
+body {
+	min-height: 100vh;
+}
+/* NAV */
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+	list-style: none;
+}
+.flex-nav__li {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #754C45;
+	width: 135px;
+	height: 30px;
+	margin-left: 2.5em;
+	padding: 2px;
+	border-radius: 5px;
+}
+.flex-nav__li:hover {
+	background-color: lightblue;
+}
+.flex-nav__li:hover a {
+	color: black;
+}
+a {
+	text-decoration: none;
+	color: #DFE0DF;
+}
+/* PROPIEDADES GRALES */
+footer p, div {
+	color: #ffffff;
+}
+.titulo {
+	color: #005B49;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	animation-name: titulo_animado;/*PROPIEDADES DE LA ANIMACION*/
+	animation-iteration-count: 1;
+	animation-delay: 500ms;
+	animation-duration: 2s;
+}
+.centrar-texto {
+	text-align: center;
+}
+.display-block {
+	display: block;
+}
+/* GRID GENERAL*/
+.grid-areas {
+	display: grid;
+	grid-template-areas: "header" "main" "footer";
+	grid-template-rows: 6.5em auto 4em;
+}
+.grid-areas__header {
+	grid-area: header;
+}
+.grid-areas__main {
+	grid-area: main;
+}
+.grid-areas__footer {
+	grid-area: footer;
+}
