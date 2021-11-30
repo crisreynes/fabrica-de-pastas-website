@@ -7,37 +7,48 @@
 
 html {
 	font-family: 'Inter', sans-serif;
+	font-size: 16px;
 }
-.titulo {
-	font-family: 'Open Sans', sans-serif;
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fuente-titulo;
+	color: $color-titulo;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	animation-name: titulo_animado;/*PROPIEDADES DE LA ANIMACION*/
+	animation-iteration-count: 1;
+	animation-delay: 500ms;
+	animation-duration: 2s;
 }
 /* animaciones */
 img:hover {
-	transform: scale(1.09);
+	transform: scale(1.009);
 }
 @keyframes titulo_animado {
 	0% {
 		transform: translateX(0);
 	}
 	50% {
-		transform: translateX(2.5em);
+		transform: translateX(1.9rem);
 	}
 	100% {
 	transform: translateX(0);
 	}
 }
 /* background & padding */
-header {
-	background-color: #ff6b21;
-	padding: 1em 1.5em;
+.grid-areas__header {
+	background-color: $color-header;
+	padding: 1rem 1.5rem;
+	grid-area: header;
 }
-main {
-	background-color: #FFE7D4;
-	padding: 1em 1.5em;
+.grid-areas__main {
+	background-color: $color-main;
+	padding: 1rem 1.5rem;
+	grid-area: main;
 }
-footer {
-	background-color: #000000;
-	padding: 1em 1.5em;
+.grid-areas__footer {
+	background-color: #000;
+	padding: 1rem 1.5rem;
+	grid-area: footer;
 }
 body {
 	min-height: 100vh;
@@ -54,7 +65,7 @@ header {
 	flex-direction: row;
 	justify-content: flex-end;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
 	text-align: center;
 	list-style: none;
 }
@@ -64,17 +75,18 @@ header {
 	justify-content: center;
 	align-items: center;
 	background-color: #754C45;
-	width: 135px;
-	height: 30px;
-	margin-left: 2.5em;
+	width: 9.2rem;
+	height: 2.3rem;
+	margin-left: 2rem;
 	padding: 2px;
 	border-radius: 5px;
+	font-size: 1.15em
 }
 .flex-nav__li:hover {
 	background-color: lightblue;
-}
-.flex-nav__li:hover a {
-	color: black;
+	a {
+		color: black;
+	}
 }
 a {
 	text-decoration: none;
@@ -83,15 +95,6 @@ a {
 /* PROPIEDADES GRALES */
 footer p, div {
 	color: #ffffff;
-}
-.titulo {
-	color: #005B49;
-	margin-top: 1em;
-	margin-bottom: 1em;
-	animation-name: titulo_animado;/*PROPIEDADES DE LA ANIMACION*/
-	animation-iteration-count: 1;
-	animation-delay: 500ms;
-	animation-duration: 2s;
 }
 .centrar-texto {
 	text-align: center;
@@ -104,13 +107,4 @@ footer p, div {
 	display: grid;
 	grid-template-areas: "header" "main" "footer";
 	grid-template-rows: 6.5em auto 4em;
-}
-.grid-areas__header {
-	grid-area: header;
-}
-.grid-areas__main {
-	grid-area: main;
-}
-.grid-areas__footer {
-	grid-area: footer;
 }

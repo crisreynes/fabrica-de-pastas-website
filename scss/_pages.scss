@@ -3,10 +3,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-}
-.img-p-index img {
-	width: 90%;
-	height: auto;
+	img {
+		width: 90%;
+		height: auto;
+	}
 }
 .img {
 	display: flex;
@@ -16,6 +16,11 @@
 	column-gap: 3.5em;
 }
 /*especialidades.html*/
+.carousel {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
 iframe {
 	max-width: 100%;
 }
@@ -25,13 +30,6 @@ div img {
 	margin-bottom: .3em;
 }
 /* nosotros.html */
-article {
-	margin-top: 1.5em;
-}
-section p {
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
 .nosotros-texto {
 	display: flex;
 	flex-direction: row;
@@ -43,20 +41,17 @@ section p {
 	border-radius: 15px;
 	font-size: 2.5em;
 	grid-area: texto;
+	p {
+		color: black;
+		margin: 0 .5em;
+	}
 }
-.nosotros-texto p {
-	color: black;
-	margin: 0 .5em;
-}
-.nosotros-img {
-	width: 100%;
-	background-image: url(../assets/chef-pasta.jpg);
-	grid-area: img;
-}
-.nosotros-img2 {
-	grid-area: img2;
-	max-width: 100%;
-	background-image: url(../assets/cooked-pasta.jpg)
+@each $nosotros, $imagen, $grid-area in (chef, chef-pasta, img), (pasta-plate, cooked-pasta, img2) {
+	.#{$nosotros}-img {
+		max-width: 100%;
+		background-image: url(../assets/#{$imagen}.jpg);
+		grid-area: #{$grid-area};
+	}
 }
 /*GRID NOSOTROS.HTML*/
 .grid-nosotros {
@@ -72,25 +67,19 @@ section p {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-}
-.form {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	background-color: black;
-	width: 35%;
-	padding: 2.5em 1em;
-	border: 0.25em solid #150b54;
-}
-textarea {
-  resize: none;
-}
-.contacto input, textarea{
-	margin-bottom: 8px;
-	margin-top: 8px;
-}
-.carousel {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	input, textarea {
+		margin: 8px;
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background-color: black;
+		width: 35%;
+		padding: 2.5em 1em;
+		border: 0.25em solid #150b54;
+		textarea {
+		  resize: none;
+		}
+	}
 }
