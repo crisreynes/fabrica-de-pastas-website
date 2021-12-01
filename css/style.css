@@ -234,8 +234,8 @@ div img {
     grid-row-gap: .5em;
     justify-content: center; }
   /* contacto.html */
-  .form {
-    width: 65%;
+  .contacto .form {
+    width: 75%;
     font-size: 1.5rem; } }
 
 /*------------------------------------*/
@@ -289,6 +289,6 @@ div img {
     grid-row-gap: .5em;
     justify-content: center; }
   /* contacto.html */
-  .form {
-    width: 100%;
-    font-size: 1.5rem; } }
+  .contacto .form {
+    font-size: 1.5rem;
+    width: 85%; } }

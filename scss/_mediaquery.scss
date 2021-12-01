@@ -59,10 +59,13 @@
 		justify-content: center;
 	}
 	/* contacto.html */
-	.form {
-		width: 65%;
-		font-size: 1.5rem;
+	.contacto {
+		.form {
+			width: 75%;
+			font-size: 1.5rem;
+		}
 	}
+	
 }
 /*------------------------------------*/
 /* SMARTPHONE */
@@ -131,8 +134,10 @@
 		justify-content: center;
 	}
 	/* contacto.html */
-	.form {
-		width: 100%;
-		font-size: 1.5rem;
+	.contacto {
+		.form {
+			font-size: 1.5rem;
+			width: 85%;
+		}
 	}
 }
